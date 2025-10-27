@@ -1,0 +1,628 @@
+/* ========================================
+   PROYECTO MEMORICE - CSS PERSONALIZADO
+   ======================================== */
+
+/* Variables CSS personalizadas */
+:root {
+    --memorice-cream: #F5F1E6;
+    --memorice-black: #1A1A1A;
+    --memorice-red: #C0372B;
+    --memorice-gray: #8C857B;
+    --memorice-dark-red: #8B0000;
+    --memorice-gold: #DAA520;
+    --memorice-dark-gray: #2F2F2F;
+    --memorice-light-gray: #E5E5E5;
+    
+    /* Transiciones suaves */
+    --transition-smooth: all 0.3s ease-in-out;
+    --transition-fast: all 0.2s ease;
+}
+
+/* Reset y configuración base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* Imagen de fondo para toda la web - estilo dossier */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/hero-memorice.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.08; /* Más visible como en el dossier */
+    z-index: -1;
+    pointer-events: none;
+    filter: grayscale(0.3); /* Ligeramente desaturado */
+}
+
+/* ========================================
+   BANNER SECTION
+   ======================================== */
+.banner-section {
+    width: 100%;
+    background: var(--memorice-cream);
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 2px solid var(--memorice-red);
+}
+
+.banner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--memorice-cream); /* Fallback */
+    background-image: url('../img/hero-memorice.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 26, 26, 0.8) 0%,
+        rgba(192, 55, 43, 0.4) 100%
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+  text-align: center;
+    color: var(--memorice-cream);
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-cta {
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--memorice-red);
+  color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(192, 55, 43, 0.3);
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    background: var(--memorice-dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(192, 55, 43, 0.4);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   NOSOTROS SECTION
+   ======================================== */
+.nosotros-section {
+    background: var(--memorice-cream);
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--memorice-black);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--memorice-gray);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  line-height: 1.6;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.valor-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+  text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(192, 55, 43, 0.1);
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--memorice-red);
+}
+
+.valor-icon {
+    margin-bottom: 1.5rem;
+}
+
+.valor-icon img {
+    transition: var(--transition-smooth);
+}
+
+.valor-card:hover .valor-icon img {
+    transform: scale(1.1);
+}
+
+.valor-title {
+    font-size: 1.3rem;
+  font-weight: 700;
+    color: var(--memorice-black);
+    margin-bottom: 1rem;
+}
+
+.valor-text {
+  font-size: 0.95rem;
+    color: var(--memorice-gray);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ========================================
+   PRODUCTOS SECTION
+   ======================================== */
+.productos-section {
+    background: var(--memorice-light-gray);
+    padding: 4rem 0;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(192, 55, 43, 0.1);
+    min-height: 400px; /* Altura mínima para consistencia */
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--memorice-red);
+}
+
+.producto-image {
+    position: relative;
+    overflow: hidden;
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--memorice-light-gray);
+    padding: 1rem;
+}
+
+.producto-image img {
+    width: 100%;
+    max-width: 250px; /* Limita el ancho máximo */
+    height: auto; /* Altura automática para mantener proporción */
+    max-height: 200px; /* Altura máxima */
+    object-fit: contain; /* Muestra la imagen completa */
+    transition: var(--transition-smooth);
+}
+
+.producto-card:hover .producto-image img {
+    transform: scale(1.05);
+}
+
+.producto-content {
+    padding: 1.5rem;
+    flex-shrink: 0; /* No se encoge */
+    background: white;
+}
+
+.producto-categoria {
+    display: inline-block;
+    background: var(--memorice-red);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.producto-nombre {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--memorice-black);
+    margin-bottom: 0.5rem;
+}
+
+.producto-descripcion {
+    font-size: 0.9rem;
+    color: var(--memorice-gray);
+    line-height: 1.5;
+}
+
+/* ========================================
+   CONTACTO SECTION
+   ======================================== */
+.contacto-section {
+    background: linear-gradient(
+        135deg,
+        var(--memorice-red) 0%,
+        var(--memorice-dark-red) 100%
+    );
+    padding: 4rem 0;
+    position: relative;
+}
+
+.contacto-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.contacto-form {
+    position: relative;
+    z-index: 2;
+}
+
+.form-label {
+    display: block;
+    color: var(--memorice-cream);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid rgba(245, 241, 230, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--memorice-cream);
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(245, 241, 230, 0.7);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--memorice-cream);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 3px rgba(245, 241, 230, 0.2);
+}
+
+.submit-button {
+    background: var(--memorice-black);
+    color: var(--memorice-cream);
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+    background: var(--memorice-dark-gray);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contacto-info {
+    text-align: center;
+}
+
+.contacto-info h4 {
+    color: var(--memorice-cream);
+    margin-bottom: 0.5rem;
+}
+
+.contacto-info p {
+    color: rgba(245, 241, 230, 0.8);
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animaciones de entrada */
+.valor-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.valor-card:nth-child(1) { animation-delay: 0.1s; }
+.valor-card:nth-child(2) { animation-delay: 0.2s; }
+.valor-card:nth-child(3) { animation-delay: 0.3s; }
+.valor-card:nth-child(4) { animation-delay: 0.4s; }
+
+.producto-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.producto-card:nth-child(1) { animation-delay: 0.1s; }
+.producto-card:nth-child(2) { animation-delay: 0.2s; }
+.producto-card:nth-child(3) { animation-delay: 0.3s; }
+.producto-card:nth-child(4) { animation-delay: 0.4s; }
+.producto-card:nth-child(5) { animation-delay: 0.5s; }
+.producto-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll;
+        min-height: 80vh;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .banner-image {
+        max-height: 250px;
+    }
+    
+    .valores-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: center; /* Centra las tarjetas */
+    }
+    
+    .valor-card {
+        padding: 1.5rem;
+    }
+    
+    .producto-card {
+        min-height: 450px; /* Más alto en móvil */
+        max-width: 280px; /* Menos ancho */
+        margin: 0 auto; /* Centrado */
+    }
+    
+    .producto-image {
+        padding: 1.2rem;
+        flex: 1.2; /* Más espacio para la imagen */
+    }
+    
+    .producto-image img {
+        max-width: 180px; /* Imagen más grande */
+        max-height: 200px; /* Más altura */
+    }
+    
+    .producto-content {
+        padding: 1.2rem;
+        flex-shrink: 0;
+    }
+    
+    .contacto-section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .banner-image {
+        max-height: 180px;
+    }
+    
+    .valor-card {
+        padding: 1rem;
+    }
+    
+    .producto-card {
+        min-height: 400px;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    
+    .producto-image {
+        padding: 1rem;
+        flex: 1.3; /* Aún más espacio para imagen */
+    }
+    
+    .producto-image img {
+        max-width: 160px; /* Imagen más grande */
+        max-height: 180px; /* Más altura */
+    }
+    
+    .producto-content {
+        padding: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+}
+
+.gradient-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(26, 26, 26, 0.7) 0%,
+        rgba(192, 55, 43, 0.3) 100%
+    );
+}
+
+/* Smooth scrolling para navegación */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu {
+    transition: var(--transition-smooth);
+}
+
+.mobile-menu.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.mobile-menu:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
