@@ -1,0 +1,35 @@
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.swp
+*~
+
+# Carpetas de dependencias (si usas npm/node)
+node_modules/
+
+# Archivos de configuración personal
+.vscode/
+.idea/
+
+# Archivos de respaldo
+*.backup
+*.bak
+
+# Carpetas de práctica y ejercicios (no van en la entrega)
+Git-Practica/
+PLAN-DE-COMMITS.md
+GUIA-COMMITS.md
+GUIA-COMMITS-PROGRESIVOS.md
+GUIA-FINAL-SIMPLE.md
+GUIA-GITHUB.md
+
