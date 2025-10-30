@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Favicon -->
-    <link rel="icon" href="./assets/img/favicon2.png.png" type="image/svg+xml">
-    
-    <!-- Tailwind CSS -->
+    <link rel="icon" href="./assets/img/favicon2.png" type="image/svg+xml">
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="./assets/css/main.css">
     
-    <!-- Configuración de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -39,37 +33,30 @@
     
     <title>Proyecto Memorice - Gráfica Chilena de Memoria</title>
     <meta name="description" 
-          content="Iniciativa de diseño que rescata y difunde la gráfica vinculada a la memoria reciente de la política chilena.">
+        content="Iniciativa de diseño que rescata y difunde la gráfica vinculada a la memoria reciente de la política chilena.">
 </head>
 
 <body class="bg-memorice-cream text-memorice-black font-sans">
-    
-    <!-- HEADER -->
     <header class="bg-memorice-black">
         <nav class="
             max-w-7xl 
             mx-auto 
-            px-4 sm:px-6 lg:px-8
-        ">
+            px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                
-                <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#" class="flex items-center">
-                        <img src="./assets/img/logomedianoblk.png" 
-                             alt="Proyecto Memorice" 
-                             class="h-8 w-auto">
+                        <img src="./assets/img/logo-blk3.png" 
+                            alt="Proyecto Memorice" 
+                            class="h-14 w-auto">
                     </a>
                 </div>
                 
-                <!-- Navegación Desktop -->
                 <div class="hidden md:block">
                     <div class="
                         ml-10 
                         flex 
                         items-baseline 
-                        space-x-4
-                    ">
+                        space-x-4">
                         <a href="#inicio" class="
                             text-memorice-cream 
                             hover:text-memorice-red 
@@ -109,7 +96,6 @@
                     </div>
                 </div>
                 
-                <!-- Botón Hamburguesa Mobile -->
                 <div class="md:hidden">
                     <button type="button" class="
                         mobile-menu-button 
@@ -125,36 +111,34 @@
                         focus:ring-2 
                         focus:ring-inset 
                         focus:ring-memorice-cream
-                    " aria-controls="mobile-menu" aria-expanded="false">
+                        "aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Abrir menú principal</span>
                         <svg class="block h-6 w-6" 
-                             xmlns="http://www.w3.org/2000/svg" 
-                             fill="none" 
-                             viewBox="0 0 24 24" 
-                             stroke="currentColor" 
-                             aria-hidden="true">
+                            xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke="currentColor" 
+                            aria-hidden="true">
                             <path stroke-linecap="round" 
-                                  stroke-linejoin="round" 
-                                  stroke-width="2" 
-                                  d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
+                                stroke-linejoin="round" 
+                                stroke-width="2" 
+                                d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <!-- Menú Mobile -->
             <div class="
                 md:hidden 
                 mobile-menu 
                 hidden
-            " id="mobile-menu">
+                "id="mobile-menu">
                 <div class="
                     px-2 
                     pt-2 
                     pb-3 
                     space-y-1 
-                    sm:px-3
-                ">
+                    sm:px-3">
                     <a href="#inicio" class="
                         text-memorice-cream 
                         hover:text-memorice-red 
@@ -191,25 +175,14 @@
                         text-base 
                         font-medium
                     ">Contacto</a>
+                </div>
             </div>
-          </div>
         </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        
-        <!-- BANNER SECTION -->
-        <section class="banner-section">
-            <div class="banner-container">
-                <img src="./assets/img/bannermemorice.png" 
-                     alt="Banner Proyecto Memorice" 
-                     class="banner-image">
-            </div>
-        </section>
-    
-        <!-- HERO SECTION -->
+    <main>        
         <section id="inicio" class="hero-section">
+            
             <div class="hero-content">
                 <h1 class="hero-title">PROYECTO MEMORICE</h1>
                 <p class="hero-subtitle">
@@ -222,33 +195,26 @@
             </div>
         </section>
 
-        <!-- NOSOTROS SECTION -->
         <section id="nosotros" class="nosotros-section">
             <div class="
                 max-w-7xl 
                 mx-auto 
                 px-4 sm:px-6 lg:px-8 
-                py-16
-            ">
-                
-                <!-- Título de la sección -->
+                py-16">
                 <div class="text-center mb-16">
                     <h2 class="section-title">Nuestra Propuesta</h2>
                     <p class="section-subtitle">
                         Crear elementos que conmuevan a diversas generaciones 
                         a través de la gráfica chilena
                     </p>
-</div>
+                </div>
 
-                <!-- Grid de valores -->
                 <div class="valores-grid">
-                    
-                    <!-- Definición -->
                     <div class="valor-card">
                         <div class="valor-icon">
-                            <img src="./assets/img/favicon2.svg" 
-                                 alt="Definición" 
-                                 class="w-16 h-16 mx-auto">
+                            <img src="./assets/img/favicon2.png" 
+                                alt="Definición" 
+                                class="w-16 h-16 mx-auto">
                         </div>
                         <h3 class="valor-title">Definición</h3>
                         <p class="valor-text">
@@ -258,150 +224,136 @@
                             a inicios de los 90'.
                         </p>
                     </div>
-                    
-                    <!-- Misión -->
+
                     <div class="valor-card">
                         <div class="valor-icon">
-                            <img src="./assets/img/favicon2.svg" 
-                                 alt="Misión" 
-                                 class="w-16 h-16 mx-auto">
+                            <img src="./assets/img/favicon2.png" 
+                                alt="Misión" 
+                                class="w-16 h-16 mx-auto">
                         </div>
                         <h3 class="valor-title">Misión</h3>
                         <p class="valor-text">
                             Proyecto Memorice es una iniciativa de diseño que rescata y difunde 
                             la gráfica vinculada a la memoria reciente de la política chilena.
                         </p>
-        </div>
-                    
-                    <!-- Visión -->
+                    </div>
+
                     <div class="valor-card">
                         <div class="valor-icon">
-                            <img src="./assets/img/favicon2.svg" 
-                                 alt="Visión" 
-                                 class="w-16 h-16 mx-auto">
-      </div>
+                            <img src="./assets/img/favicon2.png" 
+                                alt="Visión" 
+                                class="w-16 h-16 mx-auto">
+                        </div>
                         <h3 class="valor-title">Visión</h3>
                         <p class="valor-text">
                             Mantener vigente la memoria visual de la política chilena 
                             en diferentes soportes con sentido.
                         </p>
-    </div>
+                    </div>
 
-                    <!-- Valores -->
                     <div class="valor-card">
                         <div class="valor-icon">
-                            <img src="./assets/img/favicon2.svg" 
-                                 alt="Valores" 
-                                 class="w-16 h-16 mx-auto">
+                            <img src="./assets/img/favicon2.png" 
+                                alt="Valores" 
+                                class="w-16 h-16 mx-auto">
                         </div>
                         <h3 class="valor-title">Valores</h3>
                         <p class="valor-text">
                             Calidad de la manufactura, investigación interdisciplinar 
                             y promoción de los Derechos Humanos.
                         </p>
-        </div>
-
-              </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <!-- PRODUCTOS SECTION -->
         <section id="productos" class="productos-section">
             <div class="
                 max-w-7xl 
                 mx-auto 
                 px-4 sm:px-6 lg:px-8 
-                py-16
-            ">
-                
-                <!-- Título de la sección -->
+                py-16">
                 <div class="text-center mb-16">
                     <h2 class="section-title">Nuestros Productos</h2>
                     <p class="section-subtitle">
                         Difusión de gráficas, posters, afiches históricos 
                         y merchandising con sentido cultural
                     </p>
-          </div>
+                </div>
 
-                <!-- Grid de productos -->
                 <div class="productos-grid">
                     
                     <!-- Pin Lente -->
                     <div class="producto-card">
                         <div class="producto-image">
-                            <img src="./assets/img/Memorice web-24.png" 
-                                 alt="Pin Lente" 
-                                 class="w-full h-48 object-cover">
-            </div>
+                            <img src="./assets/img/pin-lente2.png" 
+                                alt="Pin Lente" 
+                                class="w-full h-48 object-cover">
+                        </div>
+
                         <div class="producto-content">
                             <span class="producto-categoria">Pin</span>
                             <h3 class="producto-nombre">Pin Lente</h3>
                             <p class="producto-descripcion">Colección Pines de la memoria</p>
-            </div>
-          </div>
-
+                        </div>
+                    </div>                    
                     <!-- Pin Logo No -->
                     <div class="producto-card">
                         <div class="producto-image">
-                            <img src="./assets/img/Memorice web-25.png" 
-                                 alt="Pin Logo No" 
-                                 class="w-full h-48 object-cover">
-            </div>
+                            <img src="./assets/img/pin-logo-no2.png" 
+                                alt="Pin Logo No" 
+                                class="w-full h-48 object-cover">
+                        </div>
                         <div class="producto-content">
                             <span class="producto-categoria">Pin</span>
                             <h3 class="producto-nombre">Pin Logo No</h3>
                             <p class="producto-descripcion">Colección Pines de la memoria</p>
-            </div>
-          </div>
-
+                        </div>
+                    </div>
                     <!-- Pin Caballito de mar -->
                     <div class="producto-card">
                         <div class="producto-image">
-                            <img src="./assets/img/Memorice web-26.png" 
-                                 alt="Pin Caballito de mar" 
-                                 class="w-full h-48 object-cover">
-            </div>
+                            <img src="./assets/img/pin-caballito-de-mar2.png" 
+                                alt="Pin Caballito de mar" 
+                                class="w-full h-48 object-cover">
+                        </div>
                         <div class="producto-content">
                             <span class="producto-categoria">Pin</span>
                             <h3 class="producto-nombre">Pin Caballito de mar</h3>
                             <p class="producto-descripcion">Colección Pines de la memoria</p>
-            </div>
-          </div>
-
+                        </div>
+                    </div>
                     <!-- Pin ¿Dónde Están? -->
                     <div class="producto-card">
                         <div class="producto-image">
-                            <img src="./assets/img/Memorice web-27.png" 
-                                 alt="Pin ¿Dónde Están?" 
-                                 class="w-full h-48 object-cover">
-            </div>
+                            <img src="./assets/img/pin-donde-estan2.png" 
+                                alt="Pin ¿Dónde Están?" 
+                                class="w-full h-48 object-cover">
+                        </div>
                         <div class="producto-content">
                             <span class="producto-categoria">Pin</span>
                             <h3 class="producto-nombre">Pin ¿Dónde Están?</h3>
                             <p class="producto-descripcion">Colección Pines de la memoria</p>
-            </div>
-          </div>
-
+                        </div>
+                    </div>
                     <!-- Bolsa Plebiscito -->
                     <div class="producto-card">
                         <div class="producto-image">
-                            <img src="./assets/img/Memorice web-28.png" 
-                                 alt="Bolsa Plebiscito" 
-                                 class="w-full h-48 object-cover">
-            </div>
+                            <img src="./assets/img/bolso-pleb2.png" 
+                                alt="Bolsa Plebiscito" 
+                                class="w-full h-48 object-cover">
+                        </div>
                         <div class="producto-content">
                             <span class="producto-categoria">Bolsa</span>
                             <h3 class="producto-nombre">Bolsa Plebiscito</h3>
                             <p class="producto-descripcion">Colección de la memoria</p>
-            </div>
-          </div>
-
+                        </div>
+                    </div>
                     <!-- Bolsa A 35 años -->
                     <div class="producto-card">
                         <div class="producto-image">
-                            <img src="./assets/img/Memorice web-29.png" 
-                                 alt="Bolsa A 35 años volvemos a decir que no" 
-                                 class="w-full h-48 object-cover">
+                            <img src="./assets/img/bolso-no2.png" 
+                                alt="Bolsa A 35 años volvemos a decir que no" 
+                                class="w-full h-48 object-cover">
                         </div>
                         <div class="producto-content">
                             <span class="producto-categoria">Bolsa</span>
@@ -411,9 +363,15 @@
                             <p class="producto-descripcion">Colección de la memoria</p>
                         </div>
                     </div>
-
-        </div>
-      </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner-section">
+            <div class="banner-container">
+                <img src="./assets/img/banner-memorice.png" 
+                    alt="Banner Proyecto Memorice" 
+                    class="banner-image">
+            </div>
         </section>
 
         <!-- CONTACTO SECTION -->
@@ -426,8 +384,7 @@
                     <p class="section-subtitle text-white">
                         Déjanos tus datos y te responderemos a la brevedad
                     </p>
-    </div>
-
+                </div>
                 <!-- Formulario de contacto -->
                 <div class="max-w-2xl mx-auto">
                     <form class="contacto-form">
@@ -435,40 +392,40 @@
                             <div>
                                 <label for="nombre" class="form-label">Nombre</label>
                                 <input type="text" 
-                                       id="nombre" 
-                                       name="nombre" 
-                                       class="form-input" 
-                                       placeholder="Tu nombre completo">
-              </div>
+                                    id="nombre" 
+                                    name="nombre" 
+                                    class="form-input" 
+                                    placeholder="Tu nombre completo">
+                            </div>
                             <div>
                                 <label for="email" class="form-label">Correo electrónico</label>
                                 <input type="email" 
-                                       id="email" 
-                                       name="email" 
-                                       class="form-input" 
-                                       placeholder="tu@email.com">
-              </div>
-            </div>
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="tu@email.com">
+                            </div>
+                        </div>
                         <div class="mb-6">
                             <label for="asunto" class="form-label">Asunto</label>
                             <input type="text" 
-                                   id="asunto" 
-                                   name="asunto" 
-                                   class="form-input" 
-                                   placeholder="¿En qué podemos ayudarte?">
+                                id="asunto" 
+                                name="asunto" 
+                                class="form-input" 
+                                placeholder="¿En qué podemos ayudarte?">
                         </div>
                         <div class="mb-6">
                             <label for="mensaje" class="form-label">Mensaje</label>
                             <textarea id="mensaje" 
-                                      name="mensaje" 
-                                      rows="4" 
-                                      class="form-textarea" 
-                                      placeholder="Cuéntanos más detalles..."></textarea>
+                                    name="mensaje" 
+                                    rows="4" 
+                                    class="form-textarea" 
+                                    placeholder="Cuéntanos más detalles..."></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="submit-button">Enviar Mensaje</button>
-            </div>
-          </form>
+                        </div>
+                    </form>
                 </div>
                 
                 <!-- Información de contacto -->
@@ -491,6 +448,8 @@
       </div>
     </div>
         </section>
+    
+
 
   </main>
 
@@ -500,15 +459,13 @@
             max-w-7xl 
             mx-auto 
             px-4 sm:px-6 lg:px-8 
-            py-8
-        ">
+            py-8">
             <div class="
                 flex 
                 flex-col 
                 md:flex-row 
                 justify-between 
-                items-center
-            ">
+                items-center">
                 <div class="mb-4 md:mb-0">
                     <p class="text-sm">
                         &copy; 2025 PROYECTO MEMORICE. 
@@ -519,8 +476,7 @@
                     <a href="#" class="
                         text-memorice-cream 
                         hover:text-memorice-red 
-                        transition-colors
-                    ">
+                        transition-colors">
                         <span class="sr-only">Instagram</span>
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348zm7.718 0c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348z"/>
@@ -529,17 +485,16 @@
                     <a href="#" class="
                         text-memorice-cream 
                         hover:text-memorice-red 
-                        transition-colors
-                    ">
+                        transition-colors">
                         <span class="sr-only">Facebook</span>
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
                 </div>
-      </div>
-    </div>
-  </footer>
+            </div>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="./assets/js/main.js"></script>
