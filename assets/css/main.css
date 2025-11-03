@@ -38,7 +38,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/hero-memorice.png');
+    background-image: url('../img/hero-con-fondo.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -85,11 +85,11 @@ body::before {
     position: relative;
     min-height: 100vh;
     background-color: var(--memorice-cream); /* Fallback */
-    background-image: url('../img/hero-memorice.png');
+    background-image: url('../img/texturahueso.png');
     background-size: cover;
+    background-repeat: repeat;
+    background-attachment: scroll;
     background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,18 +104,32 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
+    background-image: url('../img/herosinfondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(
         135deg,
-        rgba(26, 26, 26, 0.8) 0%,
-        rgba(192, 55, 43, 0.4) 100%
-    );
-    z-index: 1;
+        rgba(26, 26, 26, 0.3) 0%,
+        rgba(192, 55, 43, 0.1) 100%
+    ); /* Overlay muy sutil para que se vea la textura */
+    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
-  text-align: center;
+    z-index: 3; /* Por encima del overlay */
+    text-align: center;
     color: var(--memorice-cream);
     max-width: 800px;
     padding: 2rem;
@@ -170,8 +184,30 @@ body::before {
    NOSOTROS SECTION
    ======================================== */
 .nosotros-section {
-    background: var(--memorice-cream);
+    background-color: #8b6fa8; /* Color base morado como fallback */
+    background-image: url('../img/texturamorada.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
     padding: 4rem 0;
+    position: relative;
+}
+
+.nosotros-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(245, 241, 230, 0.5); /* Overlay medio para mostrar textura pero mantener legibilidad */
+    z-index: 0;
+}
+
+.nosotros-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .section-title {
@@ -184,11 +220,12 @@ body::before {
 
 .section-subtitle {
     font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--memorice-gray);
+    color: var(--memorice-black);
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-  line-height: 1.6;
+    line-height: 1.6;
+    font-weight: 600; /* Texto un poco más grueso para mejor legibilidad */
 }
 
 .valores-grid {
@@ -199,13 +236,14 @@ body::before {
 }
 
 .valor-card {
-    background: white;
+    background: rgba(245, 241, 230, 0.85); /* Fondo crema semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque sutil */
     padding: 2rem;
     border-radius: 12px;
-  text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: var(--transition-smooth);
-    border: 1px solid rgba(192, 55, 43, 0.1);
+    border: 1px solid rgba(192, 55, 43, 0.2);
 }
 
 .valor-card:hover {
@@ -244,8 +282,30 @@ body::before {
    PRODUCTOS SECTION
    ======================================== */
 .productos-section {
-    background: var(--memorice-light-gray);
+    background-color: #c0372b; /* Color base rojo como fallback */
+    background-image: url('../img/texturaroja.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
     padding: 4rem 0;
+    position: relative;
+}
+
+.productos-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(245, 241, 230, 0.3); /* Overlay claro sutil para que el texto sea legible */
+    z-index: 0;
+}
+
+.productos-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .productos-grid {
@@ -333,11 +393,12 @@ body::before {
    CONTACTO SECTION
    ======================================== */
 .contacto-section {
-    background: linear-gradient(
-        135deg,
-        var(--memorice-red) 0%,
-        var(--memorice-dark-red) 100%
-    );
+    background-color: #2d5f5f; /* Color base verde agua oscuro como fallback */
+    background-image: url('../img/texturaverdeagua.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
     padding: 4rem 0;
     position: relative;
 }
@@ -349,8 +410,13 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    background: rgba(26, 26, 26, 0.4); /* Overlay oscuro sutil para legibilidad del texto */
+    z-index: 0;
+}
+
+.contacto-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .contacto-form {

@@ -243,8 +243,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // PERFORMANCE: Preload de imágenes críticas
     // ========================================
     const criticalImages = [
-        './assets/img/hero-memorice.png',
-        './assets/img/logomedianoblk.png'
+        './assets/img/hero-con-fondo.png',
+        './assets/img/logo-blk3.png'
     ];
     
     criticalImages.forEach(src => {
